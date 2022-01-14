@@ -1,8 +1,8 @@
-resource "aws_amplify_app" "amplify_test" {
-  name       = "amplify_test"
-  repository = "https://github.com/selenerescio/amplify_test"
+resource "aws_amplify_app" "amplify_test2" {
+  name       = "amplify_test2"
+  repository = "https://github.com/selenerescio/amplify_test2"
 # GitHub personal access token
-  access_token = "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"
+  access_token = "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"
 # The default rewrites and redirects added by the Amplify Console.
   custom_rule {
     source = "/<*>"
@@ -26,7 +26,7 @@ resource "aws_amplify_app" "amplify_test" {
 
 }
 resource "aws_amplify_branch" "develop" {
-  app_id      = aws_amplify_app.amplify_test.id
+  app_id      = aws_amplify_app.amplify_test2.id
   branch_name = "master"
   stage     = "PRODUCTION"
 }
